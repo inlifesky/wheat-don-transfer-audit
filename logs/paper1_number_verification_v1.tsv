@@ -1,0 +1,101 @@
+claim_in_draft	value	source_file	source_value	status
+2021 n lines	298	results/01_data_audit.md	298 rows	VERIFIED
+2022 n lines	285	results/01_data_audit.md	285 rows	VERIFIED
+across n lines	558	results/01_data_audit.md	558 rows	VERIFIED
+cross-year genotype overlap	34	results/01_data_audit.md	overlap=34	VERIFIED
+missing cells	0	results/01_data_audit.md	total missing cells: 0	VERIFIED
+wavebands	204 (397-1004nm)	results/01_data_audit.md	R397.32..R1003.58	VERIFIED
+2021 DON range/mean	5.0-58.7 / 27.83	results/02_don_distribution.md	min5.0 max58.7 mean27.831	VERIFIED
+2022 DON range/mean	4.7-51.1 / 21.25	results/02_don_distribution.md	min4.7 max51.1 mean21.247	VERIFIED
+across DON mean	24.81	results/02_don_distribution.md	mean24.810	VERIFIED
+year-mean DON diff	6.6 ppm	derived	27.83-21.25=6.58	VERIFIED
+% over FDA 1ppm / EU 1.25	100%	results/02_don_distribution.md	298/298 285/285 = 100%	VERIFIED
+R1 2021 sg2/EN R2	0.667	results/03_r1_within_year.tsv	0.6669	VERIFIED
+R1 2022 sg2/EN R2	0.517	results/03_r1_within_year.tsv	0.5171	VERIFIED
+R1 2021 sqrt(R2)=r	0.82	derived	sqrt(0.6669)=0.816	VERIFIED
+R1 2022 sqrt(R2)=r	0.72	derived	sqrt(0.5171)=0.719	VERIFIED
+published r 2021/2022	0.82 / 0.70	Concepcion2025 G3; PHASE_-1 doc	0.82 / 0.70	VERIFIED(source paper)
+raw 2021 EN R2	0.455	results/03_r1_within_year.tsv	0.4552	VERIFIED
+raw 2021 PLS R2	0.385	results/03_r1_within_year.tsv	0.3852	VERIFIED
+R1 2021 RMSE sg2/EN	7.53	results/03_r1_within_year.tsv	7.5256	VERIFIED
+R2 2021->2022 EN R2	-2.73	results/04_r2_r3.tsv	-2.7333	VERIFIED
+R2 2022->2021 EN R2	-2.15	results/04_r2_r3.tsv	-2.1481	VERIFIED
+R2 2021->2022 PLS R2	-3.19	results/04_r2_r3.tsv	-3.1943	VERIFIED
+R2 2022->2021 PLS R2	-1.33	results/04_r2_r3.tsv	-1.3274	VERIFIED
+R1-R2 gap (EN)	3.25 / 2.82	results/04_r2_r3.tsv	3.2503 / 2.8151	VERIFIED
+R2 2021->2022 EN bias	-14.7	results/04_r2_r3.tsv	-14.6663	VERIFIED
+R2 2022->2021 EN bias	+20.2	results/04_r2_r3.tsv	20.1545	VERIFIED
+R2 2021->2022 EN RMSE	17.6	results/04_r2_r3.tsv	17.5510	VERIFIED
+R2 2022->2021 EN RMSE	23.6	results/04_r2_r3.tsv	23.5899	VERIFIED
+systematic offset	15-20 ppm	derived from bias 14.7-20.2	14.7/16.0/20.2/14.7	VERIFIED
+cross-year Pearson r EN	0.345 / 0.437	results/04_r2_r3.tsv	0.3452 / 0.4371	VERIFIED
+screening AUC 2021->2022 EN	0.68	results/04_r2_r3.tsv	0.6833	VERIFIED
+screening AUC 2022->2021 EN	0.73	results/04_r2_r3.tsv	0.7327	VERIFIED
+sens@topT EN	~0.5	results/04_r2_r3.tsv	0.5053 / 0.4848	VERIFIED
+spec@topT EN	~0.75	results/04_r2_r3.tsv	0.7526 / 0.7437	VERIFIED
+R3 seen RMSE 2021->2022	15.5	results/04_r2_r3.tsv	15.5053	VERIFIED
+R3 unseen RMSE 2021->2022	17.8	results/04_r2_r3.tsv	17.8101	VERIFIED
+R3 seen RMSE 2022->2021	23.3	results/04_r2_r3.tsv	23.2847	VERIFIED
+R3 unseen RMSE 2022->2021	23.6	results/04_r2_r3.tsv	23.6289	VERIFIED
+VIS R2 2021/2022	0.660 / 0.534	results/05_waveband_audit.md	0.660 / 0.534	VERIFIED
+NIR R2 2021/2022	0.064 / -0.012	results/05_waveband_audit.md	0.064 / -0.012	VERIFIED
+red 560-680 R2	0.604 / 0.429	results/05_waveband_audit.md	0.604 / 0.429	VERIFIED
+band stability Spearman rho	0.21	results/05_waveband_audit.md	0.208	VERIFIED
+top-20 Jaccard	0.08 (3/37)	results/05_waveband_audit.md	0.081 (3/37)	VERIFIED
+2021 top bands green-centred	~500-600nm	results/05_waveband_audit.md	501.7,504.6,566.2,598.6	VERIFIED
+2022 top bands red-centred	~625-670nm	results/05_waveband_audit.md	625.2,669.8,637.1,660.8	VERIFIED
+REF Concepcion2025 title	"...prediction blending enables..."	WebSearch G3 OUP jkaf176	confirmed (NOT "Ensembles of")	VERIFIED-CORRECTED
+REF Concepcion2025 venue	G3 15(10):jkaf176 2025	academic.oup.com/g3journal	confirmed	VERIFIED
+REF SciRep2024	14:19340	nature.com/s41598-024-69830-5	confirmed	VERIFIED
+REF Vicens-Sans2024	Food Res Int 178:113984	pubmed 38309885	confirmed; 600 kernels UHPLC balacc0.71	VERIFIED
+=== v2 ADDITIONS (scripts 47,48) ===	===	===	===	===
+R2 boot CI 2021->2022 EN	-2.73 [-3.40,-2.23]	results/48_bootstrap_R2_CIs.tsv	-2.73 [-3.40,-2.23]	VERIFIED
+R2 boot CI 2022->2021 EN	-2.15 [-2.82,-1.67]	results/48_bootstrap_R2_CIs.tsv	-2.15 [-2.82,-1.67]	VERIFIED
+R2 boot CI 2021->2022 PLS	-3.19 [-3.91,-2.64]	results/48_bootstrap_R2_CIs.tsv	-3.19 [-3.91,-2.64]	VERIFIED
+R2 boot CI 2022->2021 PLS	-1.33 [-1.84,-0.96]	results/48_bootstrap_R2_CIs.tsv	-1.33 [-1.84,-0.96]	VERIFIED
+gap CI 2021->2022 EN	3.25 [2.74,3.92]	results/48_bootstrap_R2_CIs.tsv	3.25 [2.74,3.92]	VERIFIED
+gap CI all > 1.6	min gap CI lo 1.61	results/48_bootstrap_R2_CIs.tsv	PLS 2022->2021 gap_lo=1.61	VERIFIED
+recal bias_only EN 21->22 k20 R2	-0.19	results/47_recalibration_agg.tsv	-0.1944	VERIFIED
+recal bias_only EN 22->21 k20 R2	+0.10	results/47_recalibration_agg.tsv	0.0959	VERIFIED
+recal bias_only EN 21->22 k20 RMSE	9.9	results/47_recalibration_agg.tsv	9.9126	VERIFIED
+recal bias_only EN 22->21 k20 RMSE	12.6	results/47_recalibration_agg.tsv	12.6237	VERIFIED
+RMSE halves 21->22	17.6->9.9 (44%)	derived	17.55->9.91	VERIFIED
+RMSE halves 22->21	23.6->12.6 (47%)	derived	23.59->12.62	VERIFIED
+recal linear EN 21->22 k5 unstable	-0.89 sd2.19	results/47_recalibration_agg.tsv	-0.8943 sd2.1917	VERIFIED
+recal linear EN 22->21 k5 unstable	-0.53 sd1.18	results/47_recalibration_agg.tsv	-0.5330 sd1.1844	VERIFIED
+recal AUC unchanged 21->22	0.683->0.680	results/47_recalibration_agg.tsv	baseline0.683 biasonly0.680	VERIFIED
+recal AUC unchanged 22->21	0.733->0.730	results/47_recalibration_agg.tsv	baseline0.733 biasonly0.730	VERIFIED
+residual r ceiling	0.35-0.44	results/04_r2_r3.tsv	0.345/0.437	VERIFIED
+=== v3 ADDITIONS (script 50 + refs) ===	===	===	===	===
+secondary RF R1 2021/2022	0.62/0.41	results/50_secondary_models.tsv	0.6175/0.4095	VERIFIED
+secondary SVR R1 2021/2022	0.60/0.45	results/50_secondary_models.tsv	0.5981/0.4504	VERIFIED
+secondary RF R2 21->22/22->21	-0.41/-0.25	results/50_secondary_models.tsv	-0.4079/-0.2498	VERIFIED
+secondary SVR R2 21->22/22->21	-0.31/-0.20	results/50_secondary_models.tsv	-0.3060/-0.1973	VERIFIED
+secondary SVR cross-yr r NEGATIVE	-0.164/-0.387	results/50_secondary_models.tsv	-0.1636/-0.3869	VERIFIED
+REF FDA 2010 DON 1ppm	Guidance Advisory Levels DON	fda.gov guidance	confirmed 1ppm finished wheat	VERIFIED
+REF EU 2023/915 + 2024/1022	1.25->1.0 mg/kg unprocessed wheat	eur-lex CELEX:32023R0915	confirmed; lowered by 2024/1022 Jul2024	VERIFIED
+REF Femenias2020 HSI-DON review	Food Control 108:106819	crossref doi:10.1016/j.foodcont.2019.106819	confirmed (Femenias/Gatius/Ramos/Sanchis/Marin)	VERIFIED
+=== v6 ADDITIONS (script 52 + refs) ===	===	===	===	===
+no_corr holdout 21->22 R2	-2.92	results/52_calibration_transfer.tsv	-2.9180	VERIFIED
+no_corr holdout 22->21 R2	-2.10	results/52_calibration_transfer.tsv	-2.0978	VERIFIED
+bias_only k34 21->22 R2	-0.22	results/52_calibration_transfer.tsv	-0.2251	VERIFIED
+bias_only k34 22->21 R2	+0.08	results/52_calibration_transfer.tsv	0.0773	VERIFIED
+linear k34 21->22 R2	+0.02	results/52_calibration_transfer.tsv	0.0167	VERIFIED
+linear k34 22->21 R2	+0.07	results/52_calibration_transfer.tsv	0.0671	VERIFIED
+PDS best w=10 21->22 R2	-4.78	results/52_calibration_transfer.tsv	-4.7763	VERIFIED
+PDS best w=10 22->21 R2	-0.09	results/52_calibration_transfer.tsv	-0.0852	VERIFIED
+PDS r NEGATIVE 21->22	-0.138	results/52_calibration_transfer.tsv	-0.1380	VERIFIED
+PDS r NEGATIVE 22->21	-0.085	results/52_calibration_transfer.tsv	-0.0852	VERIFIED
+EPO best K=2 21->22 R2	-0.51	results/52_calibration_transfer.tsv	-0.5103	VERIFIED
+EPO best K=5 22->21 R2	-0.53	results/52_calibration_transfer.tsv	-0.5290	VERIFIED
+GLSW best alpha=1e-4 21->22 R2	-1.68	results/52_calibration_transfer.tsv	-1.6845	VERIFIED
+GLSW best alpha=1e-4 22->21 R2	-1.01	results/52_calibration_transfer.tsv	-1.0047	VERIFIED
+REF Wang Veltkamp Kowalski 1991 PDS	Anal Chem 63(23):2750-2756	pubs.acs.org/doi/10.1021/ac00023a016	confirmed	VERIFIED
+REF Roger Chauchard Bellon-Maurel 2003 EPO	Chemom Intell Lab Syst 66:191-204	sciencedirect S0169-7439(03)00051-0	confirmed	VERIFIED
+=== v11 ADDITIONS (Martens ref + content softening) ===	===	===	===	===
+REF Martens Hoy Wise Bro Brockhoff 2003 GLSW	J Chemometrics 17(3):153-165	wiley doi:10.1002/cem.780	confirmed multi-source	VERIFIED
+GLSW cited inline in §3.7	"(GLSW; Martens et al., 2003)"	docs/PAPER1_DRAFT_v11.md line 126	confirmed	VERIFIED
+GLSW cited in cover letter	"(Martens et al. 2003)"	docs/COVER_LETTER_v4.md	confirmed	VERIFIED
+§3.5 chromophore softened	"expected to lack strong absorption"	docs/PAPER1_DRAFT_v11.md	confirmed renders pp5	VERIFIED-RENDER
+§4.5 protocol claim softened	"specified in writing before final analysis runs"	docs/PAPER1_DRAFT_v11.md	confirmed renders pp9	VERIFIED-RENDER
+Data Availability CC0 explicit	"Creative Commons Zero (CC0 1.0)"	docs/PAPER1_DRAFT_v11.md	confirmed renders pp10	VERIFIED-RENDER

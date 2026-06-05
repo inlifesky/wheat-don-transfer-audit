@@ -1,0 +1,60 @@
+# Source data — NOT redistributed (see README; download from Dryad).
+# Track only the empty-folder placeholder.
+data/*
+!data/.gitkeep
+
+# Computed outputs — regenerate by re-running scripts.
+results/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+*.egg-info/
+.pytest_cache/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Internal-only directories (never published):
+# pre-submission audit bundle + reproduction snapshot
+audit/
+# working notes / second-project material
+references/
+# local verification scratch
+_verify_results/
+
+# scripts/: publish ONLY the reproduction pipeline.
+# The working tree also holds exploratory analyses and a separate project,
+# which are intentionally not published here.
+scripts/*
+!scripts/preprocessing.py
+!scripts/01_data_audit.py
+!scripts/02_don_distribution.py
+!scripts/03_r1_within_year_cv.py
+!scripts/04_r2_r3_cross_year.py
+!scripts/05_waveband_audit.py
+!scripts/47_recalibration_kcurve.py
+!scripts/48_bootstrap_R2_CIs.py
+!scripts/50_secondary_models.py
+!scripts/52_calibration_transfer.py
+
+# docs/: publish ONLY the locked pre-analysis protocol.
+# The manuscript itself lives at the journal / preprint server.
+docs/*
+!docs/PHASE_0_summary_v1.md
+
+# logs/: publish ONLY download provenance + the number-verification log.
+logs/*
+!logs/download_provenance.tsv
+!logs/paper1_number_verification_v1.tsv

@@ -1,0 +1,15 @@
+# Conda environment for the wheat-DON VIS-NIR transfer audit pipeline.
+# Mirrors requirements.txt. Tested on Python 3.14.0; works on 3.11+.
+# To reproduce: conda env create -f environment.yml && conda activate wheat-don-audit
+name: wheat-don-audit
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.14
+  - numpy=2.4.*
+  - pandas=2.3.*
+  - scipy=1.17.*
+  - scikit-learn=1.8.*
+  - matplotlib=3.10.*
+  - pip

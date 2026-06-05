@@ -1,0 +1,8 @@
+# Pinned dependencies for the wheat-DON VIS-NIR transfer audit pipeline
+# Tested on Python 3.14.0; should work on Python 3.11+.
+# To reproduce exactly: python -m venv venv && source venv/bin/activate && pip install -r requirements.txt
+numpy==2.4.6
+pandas==2.3.3
+scipy==1.17.1
+scikit-learn==1.8.0
+matplotlib==3.10.8
