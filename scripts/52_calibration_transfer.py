@@ -269,7 +269,7 @@ ORDER = [("no_correction (holdout)", "no_correction_holdout"),
          ("PDS (best w)", "PDS_best"),
          ("EPO (best K)", "EPO_best"),
          ("GLSW (best α)", "GLSW_best")]
-COLORS = ["#7f7f7f", "#4C72B0", "#55A868", "#C44E52", "#8172B3", "#CCB974"]
+COLORS = ["#9AA7AB", "#3D6E70", "#5E8C7D", "#C77B53", "#B5503C", "#C99A3B"]
 
 for ax, dir_ in zip(axes, ["2021->2022", "2022->2021"]):
     vals = []
@@ -296,7 +296,7 @@ for ax, dir_ in zip(axes, ["2021->2022", "2022->2021"]):
 
 fig.suptitle("Spectral-level calibration transfer fails; only prediction-space recalibration helps", y=1.02, fontsize=11)
 fig.tight_layout()
-fig.savefig(os.path.join(RES, "FIG_calibration_transfer.png"), dpi=130, bbox_inches="tight")
+fig.savefig(os.path.join(RES, "FIG_calibration_transfer.png"), dpi=300, bbox_inches="tight"); fig.savefig(os.path.join(RES, "FIG_calibration_transfer.pdf"), bbox_inches="tight")
 
 print("\n".join(md))
 print("\n[written] results/52_calibration_transfer.{tsv,md} + FIG_calibration_transfer.png")

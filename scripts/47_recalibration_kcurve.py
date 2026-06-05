@@ -176,14 +176,14 @@ for ax, (trn, tst) in zip(axes, [("2021", "2022"), ("2022", "2021")]):
     base_r2 = base[(base.train == trn) & (base.model == "EN")].R2.values[0]
     ax.axhline(base_r2, ls=":", color="#999", lw=1.4, label=f"no recal (R²={base_r2:.2f})")
     ax.axhline(0, ls="-", color="k", lw=0.6)
-    for method, col in [("bias_only", "#4C72B0"), ("linear", "#C44E52")]:
+    for method, col in [("bias_only", "#3D6E70"), ("linear", "#C77B53")]:
         sub = agg[(agg.train == trn) & (agg.test == tst) & (agg.model == "EN") & (agg.method == method)].sort_values("k")
         ax.errorbar(sub.k, sub.R2_mean, yerr=sub.R2_sd, marker="o", capsize=3, color=col, label=method)
     ax.set_title(f"train {trn} → test {tst}  (EN, sg2)")
     ax.set_xlabel("k reference samples from test year"); ax.set_ylabel("recalibrated R² (held-out remainder)")
     ax.set_xticks(KS); ax.legend(fontsize=8)
 fig.suptitle("Per-year recalibration recovers calibration from a few reference assays", y=1.02, fontsize=11)
-fig.tight_layout(); fig.savefig(os.path.join(RES, "FIG_recalibration_kcurve.png"), dpi=130, bbox_inches="tight")
+fig.tight_layout(); fig.savefig(os.path.join(RES, "FIG_recalibration_kcurve.png"), dpi=300, bbox_inches="tight"); fig.savefig(os.path.join(RES, "FIG_recalibration_kcurve.pdf"), bbox_inches="tight")
 
 print("\n".join(md))
 print("\n[written] results/47_recalibration.{md,tsv,agg.tsv} + FIG_recalibration_kcurve.png")

@@ -96,13 +96,13 @@ open(os.path.join(RES,"05_waveband_audit.md"),"w",encoding="utf-8").write("\n".j
 
 # figure
 fig,ax=plt.subplots(2,1,figsize=(11,6),sharex=True)
-ax[0].plot(nm,imp21,label="2021",color="#4C72B0"); ax[0].plot(nm,imp22,label="2022",color="#C44E52",alpha=.8)
-ax[0].axvspan(400,700,color="gold",alpha=.08,label="VIS 400-700"); ax[0].axvspan(560,680,color="red",alpha=.08)
+ax[0].plot(nm,imp21,label="2021",color="#3D6E70"); ax[0].plot(nm,imp22,label="2022",color="#C77B53",alpha=.85)
+ax[0].axvspan(400,700,color="#D8C3A5",alpha=.30,label="VIS 400-700"); ax[0].axvspan(560,680,color="#C77B53",alpha=.13)
 ax[0].set_ylabel("|EN coef| (sg2)"); ax[0].legend(fontsize=8); ax[0].set_title(f"Band importance — cross-year Spearman rho={rho:.2f}, top-20 Jaccard={jacc:.2f}")
-ax[1].plot(nm,sel21,label="2021",color="#4C72B0"); ax[1].plot(nm,sel22,label="2022",color="#C44E52",alpha=.8)
-ax[1].axvspan(560,680,color="red",alpha=.08)
+ax[1].plot(nm,sel21,label="2021",color="#3D6E70"); ax[1].plot(nm,sel22,label="2022",color="#C77B53",alpha=.85)
+ax[1].axvspan(560,680,color="#C77B53",alpha=.13)
 ax[1].set_ylabel("bootstrap selection freq"); ax[1].set_xlabel("wavelength (nm)"); ax[1].legend(fontsize=8)
-fig.tight_layout(); fig.savefig(os.path.join(RES,"FIG_waveband_importance.png"),dpi=130)
+fig.tight_layout(); fig.savefig(os.path.join(RES,"FIG_waveband_importance.png"),dpi=300); fig.savefig(os.path.join(RES,"FIG_waveband_importance.pdf"))
 # console-safe print (ascii)
 print("rho=%.3f  jaccard=%.3f"%(rho,jacc))
 for name,a,b in reg_rows: print("%-16s 2021=%.3f 2022=%.3f"%(name,a,b))
