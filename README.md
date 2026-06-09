@@ -154,11 +154,12 @@ If any of these are off, please open an issue.
 
 ## Citation
 
-If you use this code, please cite the manuscript (once published) and the source dataset:
+If you use this code, please cite the source dataset:
 
-- Yuan, W. (2026). Transfer validation of VIS–NIR deoxynivalenol screening in wheat: recalibration limits, calibration-transfer failure, and signal-nature audit. *Manuscript under review.*
 - Concepcion, J. S., Noble, A. D., Thompson, A. M., Dong, Y., & Olson, E. L. (2025). Genomic and hyperspectral imaging-based prediction blending enables selection for reduced deoxynivalenol content in wheat grains. *G3 Genes|Genomes|Genetics, 15*(10), jkaf176. https://doi.org/10.1093/g3journal/jkaf176
 - Concepcion, J., & Olson, E. (2025). *SNP genotype and hyperspectral reflectance data* [Data set]. Dryad. https://doi.org/10.5061/dryad.d2547d8bx
+
+A full citation for this work will be added on acceptance.
 
 ---
 
