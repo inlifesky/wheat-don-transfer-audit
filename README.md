@@ -2,7 +2,7 @@
 
 Reproducibility repository for the manuscript:
 
-> Yuan, W. (2026). *Transfer validation of VIS–NIR deoxynivalenol screening in wheat: recalibration limits, calibration-transfer failure, and signal-nature audit.* Submitted to *Journal of Food Measurement and Characterization* (June 2026). ORCID: 0009-0009-4139-7802.
+> Yuan, W. (2026). *Transfer validation of VIS–NIR deoxynivalenol screening in wheat: recalibration limits, calibration-transfer failure, and signal-nature audit.* Manuscript under review. ORCID: 0009-0009-4139-7802.
 
 This repository contains the analysis pipeline that reproduces every number, table and figure in the manuscript, including the supplement. The underlying spectral data are openly deposited at Dryad and are **not** redistributed here; see [Data](#data) below for download instructions.
 
@@ -160,7 +160,7 @@ If any of these are off, please open an issue.
 
 If you use this code, please cite the manuscript (once published) and the source dataset:
 
-- Yuan, W. (2026). Transfer validation of VIS–NIR deoxynivalenol screening in wheat: recalibration limits, calibration-transfer failure, and signal-nature audit. *Submitted to Journal of Food Measurement and Characterization (June 2026).* ORCID: 0009-0009-4139-7802.
+- Yuan, W. (2026). Transfer validation of VIS–NIR deoxynivalenol screening in wheat: recalibration limits, calibration-transfer failure, and signal-nature audit. *Manuscript under review.* ORCID: 0009-0009-4139-7802.
 - Concepcion, J. S., Noble, A. D., Thompson, A. M., Dong, Y., & Olson, E. L. (2025). Genomic and hyperspectral imaging-based prediction blending enables selection for reduced deoxynivalenol content in wheat grains. *G3 Genes|Genomes|Genetics, 15*(10), jkaf176. https://doi.org/10.1093/g3journal/jkaf176
 - Concepcion, J., & Olson, E. (2025). *SNP genotype and hyperspectral reflectance data* [Data set]. Dryad. https://doi.org/10.5061/dryad.d2547d8bx
 
